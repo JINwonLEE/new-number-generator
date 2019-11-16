@@ -4,8 +4,9 @@
 <body>
     <div>
         <div>
-            <h1>Here is Lotto Numbers!!!!!!!</h1>
+            <h1>Lotto Numbers!!!!!!!</h1>
             <hi>${numbers}</hi>
+            <p>${numbers}</p>
         </div>
     </div>
 </body>
