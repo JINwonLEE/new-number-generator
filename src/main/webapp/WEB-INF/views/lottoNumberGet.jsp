@@ -6,7 +6,6 @@
         <div>
             <h1>Lotto Numbers!!!!!!!</h1>
             <hi>${numbers}</hi>
-            <p>${numbers}</p>
         </div>
     </div>
 </body>

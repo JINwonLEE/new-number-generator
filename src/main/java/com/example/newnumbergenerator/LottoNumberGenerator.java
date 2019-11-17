@@ -14,8 +14,20 @@ public class LottoNumberGenerator {
     int MAX_NUM = 45;
 
     @RequestMapping("/lotto-number-generator")
-    public String lottoMainPage() {
+    public String lottoMainPage(Model model) {
         String result = "lottoMain";
+        Random randomGenerator = new Random();
+        ArrayList<String> numberList = new ArrayList<String>();
+
+        while (numberList.size() != MAX_VOLUME) {
+            int randomNumber = randomGenerator.nextInt(MAX_NUM) + 1;
+            if (!numberList.contains(randomNumber)) {
+                    numberList.add(Integer.toString(randomNumber));
+            }
+        }
+
+        model.addAttribute("numbers", numberList);
+
         return result;
     }
 
