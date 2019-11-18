@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <head>
 <link rel="stylesheet" href="/resources/css/style.css" type="text/css"></link>
@@ -14,7 +15,10 @@
     </div>
     <script>
     function myFunction() {
-	   document.getElementById("lottoNumbers").innerHTML = ${numbers};
+	   var s = document.getElementById("lottoNumbers");
+	   <c:forEach items="${numbers}" var="number">
+		s.innerHTML = s.innerHTML + " " + "<strong>"+ ${number} + "</strong>";
+	   </c:forEach>
     }
     </script>
 </body>
