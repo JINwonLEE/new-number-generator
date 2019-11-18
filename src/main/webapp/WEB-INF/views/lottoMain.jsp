@@ -8,10 +8,14 @@
     <div>
         <div>
             <h1>Lotto Number Generator Game</h1>
-            ${numbers}
-            <lotto class="button" onclick="${numbers}">Get Numbers!!!</lotto>
-
+	    <lotto class="button" onclick="myFunction()">Get Numbers!!!</lotto>
+	    <p id="lottoNumbers"></p>
         </div>
     </div>
+    <script>
+    function myFunction() {
+	   document.getElementById("lottoNumbers").innerHTML = ${numbers};
+    }
+    </script>
 </body>
 </html>
