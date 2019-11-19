@@ -22,7 +22,7 @@ public class LottoNumberGeneratorService {
 		ArrayList<String> numberList = new ArrayList<String>();
 		while (numberList.size() != MAX_VOLUME) {
             int randomNumber = randomGenerator.nextInt(MAX_NUM) + 1;
-            if (!numberList.contains(randomNumber)) {
+            if (!numberList.contains(Integer.toString(randomNumber))) {
                     numberList.add(Integer.toString(randomNumber));
             }
         }
@@ -37,8 +37,6 @@ public class LottoNumberGeneratorService {
 		data.setNumbers(numberToString);
 
 		lottoNumberRepository.save(data);
-
-		//model.addAttribute("numbers", numberList);
 
 		return numberList;
 	}

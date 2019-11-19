@@ -16,6 +16,7 @@
     <script>
     function myFunction() {
 	   var s = document.getElementById("lottoNumbers");
+		s.innerHTML = "";
 	   <c:forEach items="${numbers}" var="number">
 		s.innerHTML = s.innerHTML + " " + "<strong>"+ ${number} + "</strong>";
 	   </c:forEach>
